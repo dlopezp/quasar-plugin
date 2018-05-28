@@ -1,0 +1,53 @@
+{
+  "name": "playmo-quasar-plugin",
+  "description": "A Vue.js Plugin",
+  "version": "0.0.3",
+  "author": {
+    "name": "Daniel López Pérez",
+    "email": "dlopezp.dev@gmail.com"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "plugin"
+  ],
+  "license": "MIT",
+  "main": "dist/playmo-quasar-plugin.common.js",
+  "unpkg": "dist/playmo-quasar-plugin.browser.js",
+  "module": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --config config/webpack.config.dev.js --progress --watch",
+    "build": "npm run build:browser && npm run build:common",
+    "build:browser": "cross-env NODE_ENV=production webpack --config config/webpack.config.browser.js --progress --hide-modules",
+    "build:common": "cross-env NODE_ENV=production webpack --config config/webpack.config.common.js --progress --hide-modules",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.0.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.12.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-html": "^1.6.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "normalizr": "^3.2.4",
+    "quasar-extras": "^2.0.2",
+    "quasar-framework": "^0.16.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "vue": "^2.5.16",
+    "vue-loader": "^10.0.0",
+    "vue-template-compiler": "^2.1.6",
+    "vuelidate": "^0.7.4",
+    "vuex": "^3.0.1",
+    "webpack": "^2.1.0-beta.28",
+    "webpack-merge": "^1.1.2"
+  }
+}
